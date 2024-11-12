@@ -1,0 +1,50 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "Toga Settings Demo"
+bundle = "org.beeware"
+version = "0.1"
+url = "https://github.com/codep3/togax-settings"
+license = "AGPL license"
+author = "Codep3"
+author_email = "codep3@github.com"
+
+[tool.briefcase.app.settings]
+formal_name = "Settings Demo"
+description = "A testing app for Toga Settings"
+sources = ["settings"]
+requires = [
+    # Replace "togax-settings" with ".." to test against the current code checkout.
+    #"togax-settings",
+    "..",
+    "schema",
+]
+
+[tool.briefcase.app.settings.macOS]
+requires = [
+    "toga-cocoa",
+    "std-nslog",
+]
+
+[tool.briefcase.app.settings.linux]
+requires = [
+    "toga-gtk",
+]
+
+[tool.briefcase.app.settings.windows]
+requires = [
+    "toga-winforms",
+]
+
+# Mobile deployments
+[tool.briefcase.app.settings.iOS]
+requires = [
+    "toga-iOS",
+    "std-nslog",
+]
+
+[tool.briefcase.app.settings.android]
+requires = [
+    "toga-android",
+]

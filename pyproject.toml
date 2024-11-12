@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+    "setuptools==75.2.0",
+    "setuptools_scm==8.1.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "togax-settings"
+description = "A settings widget and data source for Toga"
+readme = "README.md"
+requires-python = ">= 3.8"
+license.text = "AGPL"
+authors = [
+    {name="Codep3", email="codep3@github.com"},
+]
+version = "0.1"
+dependencies = [
+  "toga-core",
+  "schema"
+]
+
+[project.urls]
+Homepage = "https://github.com/Codep3/togax-settings"
+
+[project.optional-dependencies]
+# Extras used by developers *of* briefcase are pinned to specific versions to
+# ensure environment consistency.
+dev = [
+    # Pre-commit 3.6.0 deprecated support for Python 3.8
+    "pre-commit == 3.5.0 ; python_version < '3.9'",
+    "pre-commit == 4.0.1 ; python_version >= '3.9'",
+    "pytest == 8.3.3",
+    "tox == 4.23.2",
+    "toga-dummy >= 0.4.0",
+]
+
+[tool.isort]
+profile = "black"
+split_on_trailing_comma = true
+combine_as_imports = true
+
+[tool.flake8]
+max-line-length = 100
+
+[tool.pre-commit]
+repos = [
+    {repo = "https://github.com/pre-commit/pre-commit-hooks", rev = "v5.0.0"},
+    {repo = "https://github.com/PyCQA/isort", rev = "5.13.2"},
+    {repo = "https://github.com/asottile/pyupgrade", rev = "v3.19.0"},
+    {repo = "https://github.com/psf/black-pre-commit-mirror", rev = "24.10.0"},
+    {repo = "https://github.com/PyCQA/flake8", rev = "7.1.1"},
+]
