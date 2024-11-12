@@ -26,7 +26,7 @@ class ExampleCustomDataSourceApp(toga.App):
             # Comment the line above and use the line below in real apps
             # self.paths.config / "small.yaml",
             YOUR_SCHEMA.schema,
-            example_yaml="simple/example.yaml",
+            example_yaml=self.paths.app / "example.yaml",
         )
 
         # Create widgets based on the data source
