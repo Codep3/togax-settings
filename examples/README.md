@@ -7,6 +7,6 @@ Quickstart
 ----------
 
 To run this example:
-'''
+```
 python -m simple
-'''
+```

@@ -7,7 +7,7 @@ Quickstart
 ----------
 
 To run an example:
-'''
+```
 cd examples
 python -m simple
-'''
+```
