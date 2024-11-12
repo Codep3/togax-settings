@@ -10,10 +10,10 @@ license = "AGPL license"
 author = "Codep3"
 author_email = "codep3@github.com"
 
-[tool.briefcase.app.settings]
+[tool.briefcase.app.simple]
 formal_name = "Settings Demo"
 description = "A testing app for Toga Settings"
-sources = ["settings"]
+sources = ["simple"]
 requires = [
     # Replace "togax-settings" with ".." to test against the current code checkout.
     #"togax-settings",
@@ -21,30 +21,30 @@ requires = [
     "schema",
 ]
 
-[tool.briefcase.app.settings.macOS]
+[tool.briefcase.app.simple.macOS]
 requires = [
     "toga-cocoa",
     "std-nslog",
 ]
 
-[tool.briefcase.app.settings.linux]
+[tool.briefcase.app.simple.linux]
 requires = [
     "toga-gtk",
 ]
 
-[tool.briefcase.app.settings.windows]
+[tool.briefcase.app.simple.windows]
 requires = [
     "toga-winforms",
 ]
 
 # Mobile deployments
-[tool.briefcase.app.settings.iOS]
+[tool.briefcase.app.simple.iOS]
 requires = [
     "toga-iOS",
     "std-nslog",
 ]
 
-[tool.briefcase.app.settings.android]
+[tool.briefcase.app.simple.android]
 requires = [
     "toga-android",
 ]
